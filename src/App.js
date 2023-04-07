@@ -1,7 +1,8 @@
-import logo from "./logo.svg";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useFormik } from "formik";
 import "./App.css";
+import { FormikTest } from "./formik_test";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -49,22 +50,28 @@ function App() {
   };*/
 
   return (
-    <div>
-      <h1>List products with their posts</h1>
+    <React.Fragment>
+      <div className="container">
+        <FormikTest />
+        <hr></hr>
+        <div>
+          <h4>List products with their posts</h4>
 
-      <div>
-        <form onSubmit={handleSubmit}>
-          <input type="text" name="title" />
-          <button type="submit">Ajouter un produit</button>
-        </form>
+          <div>
+            <form onSubmit={handleSubmit}>
+              <input type="text" name="title" />
+              <button type="submit">Ajouter un produit</button>
+            </form>
+          </div>
+
+          <ul>
+            {products.map(product => (
+              <DisplayUser product={product} key={product.id} />
+            ))}
+          </ul>
+        </div>
       </div>
-
-      <ul>
-        {products.map(product => (
-          <DisplayUser product={product} key={product.id} />
-        ))}
-      </ul>
-    </div>
+    </React.Fragment>
   );
 }
 
