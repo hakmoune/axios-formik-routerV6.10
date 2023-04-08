@@ -31,10 +31,9 @@ export function YupTest() {
             name="firstName"
             type="text"
             className="form-control"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.email}
+            {...formik.getFieldProps("firstName")}
           ></input>
+
           {formik.errors.firstName && formik.touched.firstName ? (
             <div className="text-danger">{formik.errors.firstName}</div>
           ) : null}
@@ -46,10 +45,9 @@ export function YupTest() {
             name="email2"
             type="email"
             className="form-control"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.email}
+            {...formik.getFieldProps("email2")}
           />
+
           {formik.errors.email2 && formik.touched.email2 ? (
             <div className="text-danger">{formik.errors.email2}</div>
           ) : null}
