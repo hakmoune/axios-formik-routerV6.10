@@ -3,6 +3,7 @@ import axios from "axios";
 import { useFormik } from "formik";
 import "./App.css";
 import { FormikTest } from "./formik_test";
+import { YupTest } from "./Yup_test";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -52,10 +53,11 @@ function App() {
   return (
     <React.Fragment>
       <div className="container">
+        <YupTest />
         <FormikTest />
         <hr></hr>
         <div>
-          <h4>List products with their posts</h4>
+          <h4>List products with their posts Using Axios</h4>
 
           <div>
             <form onSubmit={handleSubmit}>
