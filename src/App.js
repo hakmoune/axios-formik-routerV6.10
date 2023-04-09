@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import "./App.css";
 import { FormikTest } from "./formik_test";
 import { YupTest } from "./Yup_test";
+import { YupFormikComponent } from "./FormikComponentYup";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -53,6 +54,7 @@ function App() {
   return (
     <React.Fragment>
       <div className="container">
+        <YupFormikComponent />
         <YupTest />
         <FormikTest />
         <hr></hr>
