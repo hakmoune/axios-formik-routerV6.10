@@ -16,7 +16,10 @@ export function YupFormikComponent() {
       .required("Ce champ doit etre remplis")
   });
 
-  const onSubmit = values => console.log(values);
+  const onSubmit = (values, onSubmitProps) => {
+    console.log(values);
+    onSubmitProps.resetForm();
+  };
 
   return (
     <div>
