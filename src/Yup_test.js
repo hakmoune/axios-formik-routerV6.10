@@ -22,7 +22,7 @@ export function YupTest() {
   });
 
   return (
-    <div>
+    <div className="container">
       <h4>Yup Test</h4>
       <form onSubmit={formik.handleSubmit}>
         <div className="form-group">
@@ -57,9 +57,6 @@ export function YupTest() {
           Submit
         </button>
       </form>
-      <hr></hr>
-      <br></br>
-      <br></br>
     </div>
   );
 }

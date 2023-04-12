@@ -22,7 +22,7 @@ export function YupFormikComponent() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h4>
         Yup with Component Formik "Formik", "Form", "Field", "ErrorMessage"
       </h4>
@@ -57,10 +57,6 @@ export function YupFormikComponent() {
           </button>
         </Form>
       </Formik>
-
-      <hr></hr>
-      <br></br>
-      <br></br>
     </div>
   );
 }

@@ -35,7 +35,7 @@ export function FormikTest() {
   });
 
   return (
-    <div>
+    <div className="container">
       <h4>Formik Test</h4>
       <form onSubmit={formik.handleSubmit}>
         <div className="form-group">

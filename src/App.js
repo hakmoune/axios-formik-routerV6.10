@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useFormik } from "formik";
 import "./App.css";
 import { FormikTest } from "./formik_test";
 import { YupTest } from "./Yup_test";
@@ -55,11 +54,6 @@ function App() {
   return (
     <React.Fragment>
       <div className="container">
-        <YupFormikUseField />
-        <YupFormikComponent />
-        <YupTest />
-        <FormikTest />
-        <hr></hr>
         <div>
           <h4>List products with their posts Using Axios</h4>
 

@@ -46,7 +46,7 @@ export function YupFormikUseField() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h4>Yup with Component Formik "UseFeild"</h4>
 
       <Formik
@@ -76,10 +76,6 @@ export function YupFormikUseField() {
           </button>
         </Form>
       </Formik>
-
-      <hr></hr>
-      <br></br>
-      <br></br>
     </div>
   );
 }

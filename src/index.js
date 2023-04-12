@@ -1,13 +1,49 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { FormikTest } from "./formik_test";
+import { YupTest } from "./Yup_test";
+import { YupFormikComponent } from "./FormikComponentYup";
+import { YupFormikUseField } from "./Formik_useFeild";
+import { Menu } from "./UI/Menu";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./error-page";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/useFormik",
+    element: <FormikTest />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/yup",
+    element: <YupTest />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/formikComponent",
+    element: <YupFormikComponent />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/useFeild",
+    element: <YupFormikUseField />,
+    errorElement: <ErrorPage />
+  }
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Menu />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
