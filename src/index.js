@@ -6,6 +6,7 @@ import { FormikTest } from "./formik_test";
 import { YupTest } from "./Yup_test";
 import { YupFormikComponent } from "./FormikComponentYup";
 import { YupFormikUseField } from "./Formik_useFeild";
+import { Product } from "./Product";
 import { Menu } from "./UI/Menu";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
   {
     path: "/useFeild",
     element: <YupFormikUseField />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/products/:id",
+    element: <Product />,
     errorElement: <ErrorPage />
   }
 ]);

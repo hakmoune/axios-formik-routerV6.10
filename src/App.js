@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
-import { FormikTest } from "./formik_test";
-import { YupTest } from "./Yup_test";
-import { YupFormikComponent } from "./FormikComponentYup";
-import { YupFormikUseField } from "./Formik_useFeild";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -76,7 +72,16 @@ function App() {
 }
 
 function DisplayUser({ product }) {
-  return <li>{product.title}</li>;
+  return (
+    <li>
+      {product.title}
+      <a href={`/products/${product.id}`}>
+        <button type="button" className="btn btn-primary btn-sm">
+          Details
+        </button>
+      </a>
+    </li>
+  );
 }
 
 export default App;
